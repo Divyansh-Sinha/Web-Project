@@ -1,0 +1,65 @@
+/* Navbar Section */
+
+#nav-bar .logo{
+    float: none;
+    text-align: center;
+}
+
+#nav-bar ul, #nav-bar ul li{
+    float: none;
+}
+
+#nav-bar ul li a{
+    padding: 5px;
+    border-bottom: #444 dotted 1px;
+}
+
+/* Showcase */
+#showcase{
+    height: 100%;
+}
+
+#showcase .showcase-content{
+    
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+/* Home-Info */
+#home-info{
+    height: 550px;
+}
+
+#home-info .info-img{
+    display: none;
+}
+
+#home-info .info-content{
+    float: none;
+    width: 100%;    
+}
+
+/* Boxing */
+.box{
+    width: 100%;
+}
+
+/* About */
+#about-info .info-left, 
+#about-info .info-right{
+    float: none;
+    width: 100%;
+}
+
+#about-info .info-right{
+    margin-top: 30px;
+}
+
+.l-heading{
+    text-align: center;
+}
+
+/* Contact */
+#form-info .box{
+    border-bottom: #444 dotted 3px;
+}
