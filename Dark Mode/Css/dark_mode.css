@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg-clr: #4DA8DA;
+    --bg-white: white;
+    --primary-grn: #3AF27D;
+    --bg-form: #FCFFF5;
+    --font-clr: #666;
+}
+
+body{
+    background: var(--bg-clr);
+    font-family: 'Raleway', sans-serif;
+    height: 95vh;
+   color: var(--font-clr);
+}
+
+#container{
+    display: block;
+    margin: 30px auto;
+    max-width: 300px;            
+    /* margin-left: 35%; */
+    
+}
+
+.form-wrap{
+    background:var(--bg-form);
+    width: 300px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.form-wrap h1::after{
+    content: "";
+    display: block;
+    margin-top: 0.4em;
+    width: 5em;
+    height: 0.15em;
+    background: var(--primary-grn);
+    margin-left: 60px;
+    
+}
+
+.form-wrap h1,p{
+    padding: 10px;
+    text-align: center;
+    
+}
+.form-wrap .form-group{
+    padding: 5px 20px;
+}
+
+.form-wrap .form-group label{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-wrap .form-group input{
+    width: 100%;
+    height: 30px;
+    border: #ddd 1px solid;
+}
+
+.form-group button{            
+    display: block;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+    color: var(--bg-white);            
+    background-color: var(--primary-grn);
+    border-radius: 2px;
+    cursor: pointer;
+    
+}
+.form-group button:hover{
+    font-size: 1rem;
+    height: 2em;
+    background: #00ebc4;
+}
+
+.form-group .bottom-text{
+    padding: 15px;
+    font-size: 10px;
+    line-height: 1.6em;
+}
+
+.form-group .bottom-text a{
+    
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+footer a{
+    color: var(--primary-grn);
+    text-decoration: none;
+
+}
+
+.dark-mode{
+    background: #263238;    
+    --primary-grn: #085924;
+    --bg-form: rgb(0, 32, 36);
+    --font-clr: white;
+}
+
+
+
+
+.wrapper-color-switch{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 5em;
+    position: relative;
+}
+
+.colorSwitch{
+    font-size: 1em;
+    text-align: center;
+    color: black;
+    width: 4em;
+    height: 1.5em;
+    background: var(--bg-white);
+    border-radius: 10em;
+    border: 3px solid var(--primary-grn);
+    position: absolute;
+    cursor: pointer;
+    top: 1em;  
+    right: 1em;
+}
+
+.toggle{
+   width: 1em;
+   height: 1em;
+   background: var(--primary-grn);
+   border-radius: 10em;
+   position: absolute;
+   top: .05em;
+   left: 0.05em;
+}
+
+.colorSwitch::before{
+    content: "Light Mode On";
+    color: #3c3c3c;
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    left: -7.5em;
+}
+
+
+/* ~ is used for applying Css to its child element */
+
+#darkModeToggle:checked ~ label .toggle{
+    transform: translateX(2.5em);
+}
+
+#darkModeToggle:checked ~ .colorSwitch::before{
+    content: "Dark Mode on";
+    color: white;
+}
+
+#darkModeToggle{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .colorSwitch{
+        width: 3.5em;
+        height: 1.5em;
+    }
+
+    .toggle{
+        width: 1em;
+        height: 1em;
+        top: 0.05em;
+    }
+
+    .colorSwitch::before{
+        top: 0.01em;
+    }
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after{
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
